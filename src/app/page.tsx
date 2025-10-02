@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { motion } from "motion/react";
+import Image from "next/image";
 import { 
   Shield, 
   Settings, 
@@ -219,13 +220,16 @@ const SafeVisionBR: React.FC = () => {
 
   // Logo SafeVisionBR
   const SafeVisionLogo = () => (
-    
-      <img 
+    <div className="relative">
+      <Image 
         src="/Logo Safe Vision-png-menor-branco-03.png" 
         alt="Safe Vision Logo" 
+        width={200}
+        height={64}
         className="h-8 md:h-16 w-auto" 
+        priority
       />
- 
+    </div>
   );
 
   const scrollToSection = (id: string) => {
@@ -338,11 +342,16 @@ const SafeVisionBR: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              <img 
-                src="/Logo Safe Vision-png-menor-branco-03.png" 
-                alt="Safe Vision Logo" 
-                className="h-52 md:h-78 w-auto"
-              />
+              <div className="relative">
+                <Image 
+                  src="/Logo Safe Vision-png-menor-branco-03.png" 
+                  alt="Safe Vision Logo" 
+                  width={400}
+                  height={312}
+                  className="h-52 md:h-78 w-auto"
+                  priority
+                />
+              </div>
             </motion.div>
             
             <motion.p 
@@ -688,11 +697,15 @@ const SafeVisionBR: React.FC = () => {
       <footer className="bg-slate-950 border-t border-slate-800 py-2">
         <div className="container mx-auto px-2 text-center">
           <div className="flex items-center justify-center mb-2">
-            <img 
-              src="/Logo Safe Vision-png-menor-branco-03.png" 
-              alt="Safe Vision Logo" 
-              className="h-14 md:h-20 w-auto"
-            />
+            <div className="relative">
+              <Image 
+                src="/Logo Safe Vision-png-menor-branco-03.png" 
+                alt="Safe Vision Logo" 
+                width={160}
+                height={80}
+                className="h-14 md:h-20 w-auto"
+              />
+            </div>
           </div>
           <p className="text-slate-400 text-sm mb-2">
             Soluções de tecnologia para um futuro mais seguro e conectado.
